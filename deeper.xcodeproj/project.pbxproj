@@ -19,6 +19,12 @@
 		F93FE93425EAA87F00B3DDC2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F93FE93325EAA87F00B3DDC2 /* RxCocoa */; };
 		F93FE93625EAA87F00B3DDC2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F93FE93525EAA87F00B3DDC2 /* RxRelay */; };
 		F93FE93C25EAA8E800B3DDC2 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = F93FE93B25EAA8E800B3DDC2 /* ReactorKit */; };
+		F951F3B725EAA97000874179 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = F951F3B625EAA97000874179 /* Resolver */; };
+		F951F3BD25EAA9AF00874179 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = F951F3BC25EAA9AF00874179 /* Then */; };
+		F951F3C325EAA9F700874179 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F951F3C225EAA9F700874179 /* SnapKit */; };
+		F951F3C925EAAAA600874179 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F951F3C825EAAAA600874179 /* Kingfisher */; };
+		F951F3CF25EAAB3500874179 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F3CE25EAAB3500874179 /* SearchViewController.swift */; };
+		F951F3D425EAAB3C00874179 /* SearchViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F3D325EAAB3C00874179 /* SearchViewReactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,8 @@
 		F93FE8E925EAA31500B3DDC2 /* deeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93FE8ED25EAA31500B3DDC2 /* deeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deeperUITests.swift; sourceTree = "<group>"; };
 		F93FE8EF25EAA31500B3DDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F951F3CE25EAAB3500874179 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F951F3D325EAAB3C00874179 /* SearchViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewReactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +66,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93FE93625EAA87F00B3DDC2 /* RxRelay in Frameworks */,
+				F951F3BD25EAA9AF00874179 /* Then in Frameworks */,
 				F93FE92A25EAA76200B3DDC2 /* RxMoya in Frameworks */,
+				F951F3B725EAA97000874179 /* Resolver in Frameworks */,
 				F93FE93C25EAA8E800B3DDC2 /* ReactorKit in Frameworks */,
 				F93FE92825EAA76200B3DDC2 /* Moya in Frameworks */,
 				F93FE93425EAA87F00B3DDC2 /* RxCocoa in Frameworks */,
 				F93FE93225EAA87F00B3DDC2 /* RxSwift in Frameworks */,
+				F951F3C925EAAAA600874179 /* Kingfisher in Frameworks */,
 				F93FE92C25EAA76200B3DDC2 /* ReactiveMoya in Frameworks */,
+				F951F3C325EAA9F700874179 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +181,7 @@
 		F93FE90225EAA42800B3DDC2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F951F3CD25EAAB2300874179 /* Search */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -197,6 +210,15 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		F951F3CD25EAAB2300874179 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F951F3CE25EAAB3500874179 /* SearchViewController.swift */,
+				F951F3D325EAAB3C00874179 /* SearchViewReactor.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,6 +243,10 @@
 				F93FE93325EAA87F00B3DDC2 /* RxCocoa */,
 				F93FE93525EAA87F00B3DDC2 /* RxRelay */,
 				F93FE93B25EAA8E800B3DDC2 /* ReactorKit */,
+				F951F3B625EAA97000874179 /* Resolver */,
+				F951F3BC25EAA9AF00874179 /* Then */,
+				F951F3C225EAA9F700874179 /* SnapKit */,
+				F951F3C825EAAAA600874179 /* Kingfisher */,
 			);
 			productName = deeper;
 			productReference = F93FE8C825EAA31300B3DDC2 /* deeper.app */;
@@ -297,6 +323,10 @@
 				F93FE92625EAA76200B3DDC2 /* XCRemoteSwiftPackageReference "Moya" */,
 				F93FE93025EAA87F00B3DDC2 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				F93FE93A25EAA8E800B3DDC2 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				F951F3B525EAA97000874179 /* XCRemoteSwiftPackageReference "Resolver" */,
+				F951F3BB25EAA9AF00874179 /* XCRemoteSwiftPackageReference "Then" */,
+				F951F3C125EAA9F700874179 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F951F3C725EAAAA600874179 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = F93FE8C925EAA31300B3DDC2 /* Products */;
 			projectDirPath = "";
@@ -340,7 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F951F3CF25EAAB3500874179 /* SearchViewController.swift in Sources */,
 				F93FE8CC25EAA31300B3DDC2 /* AppDelegate.swift in Sources */,
+				F951F3D425EAAB3C00874179 /* SearchViewReactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +723,38 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		F951F3B525EAA97000874179 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+		F951F3BB25EAA9AF00874179 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		F951F3C125EAA9F700874179 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		F951F3C725EAAAA600874179 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -728,6 +792,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F93FE93A25EAA8E800B3DDC2 /* XCRemoteSwiftPackageReference "ReactorKit" */;
 			productName = ReactorKit;
+		};
+		F951F3B625EAA97000874179 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F951F3B525EAA97000874179 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+		F951F3BC25EAA9AF00874179 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F951F3BB25EAA9AF00874179 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		F951F3C225EAA9F700874179 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F951F3C125EAA9F700874179 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F951F3C825EAAAA600874179 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F951F3C725EAAAA600874179 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
