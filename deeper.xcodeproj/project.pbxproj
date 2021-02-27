@@ -29,6 +29,7 @@
 		F951F3E725EAABF500874179 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F3E625EAABF500874179 /* BaseViewController.swift */; };
 		F951F3EC25EAAD0700874179 /* BaseReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F3EB25EAAD0700874179 /* BaseReactor.swift */; };
 		F951F3FC25EAAE6E00874179 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F3FB25EAAE6E00874179 /* NetworkLoggerPlugin.swift */; };
+		F951F40425EAAEBF00874179 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F40325EAAEBF00874179 /* NetworkProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		F951F3E625EAABF500874179 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F951F3EB25EAAD0700874179 /* BaseReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReactor.swift; sourceTree = "<group>"; };
 		F951F3FB25EAAE6E00874179 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		F951F40325EAAEBF00874179 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				F951F3FB25EAAE6E00874179 /* NetworkLoggerPlugin.swift */,
+				F951F40325EAAEBF00874179 /* NetworkProvider.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				F951F3CF25EAAB3500874179 /* SearchViewController.swift in Sources */,
 				F93FE8CC25EAA31300B3DDC2 /* AppDelegate.swift in Sources */,
 				F951F3DB25EAABCB00874179 /* Log.swift in Sources */,
+				F951F40425EAAEBF00874179 /* NetworkProvider.swift in Sources */,
 				F951F3D425EAAB3C00874179 /* SearchViewReactor.swift in Sources */,
 				F951F3FC25EAAE6E00874179 /* NetworkLoggerPlugin.swift in Sources */,
 			);
