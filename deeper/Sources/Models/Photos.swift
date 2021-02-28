@@ -15,7 +15,7 @@ struct Photos {
     var size: Int?
   }
   
-  struct Response {
+  struct Response: Codable {
     var meta: DaumMetaData
     var documents: [DaumPhoto]
   }
