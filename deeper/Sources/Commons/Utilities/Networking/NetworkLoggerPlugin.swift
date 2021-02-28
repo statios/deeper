@@ -27,7 +27,6 @@ final class NetworkLoggerPlugin: PluginType {
       Log.debug("Response: success")
       Log.debug("Query: \(query)")
       Log.debug("Target: \(target)")
-      Log.debug(String(decoding: response.data, as: UTF8.self))
       
     case .failure(let error):
       let statusCode = error.errorCode

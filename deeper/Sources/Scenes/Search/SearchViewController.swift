@@ -54,7 +54,7 @@ final class SearchViewController: BaseViewController, View {
   }
   
   func bind(reactor: SearchViewReactor) {
-    
+    // Action
     searchController.searchBar.rx.text.orEmpty
       .map { Reactor.Action.searchText($0) }
       .bind(to: reactor.action)
@@ -70,7 +70,15 @@ final class SearchViewController: BaseViewController, View {
     .bind(to: reactor.action)
     .disposed(by: disposeBag)
     
-    reactor.state.map { $0.photos }
+    collectionView.rx.willDisplayCell.map { $0.at }
+      .map { Reactor.Action.willDisplay($0) }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+    
+    
+    // State
+    reactor.state.compactMap { $0.photos?.documents }
+      .observeOn(MainScheduler.asyncInstance)
       .bind(
         to: collectionView.rx.items(
           cellIdentifier: "PhotoCell",
