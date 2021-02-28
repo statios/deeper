@@ -7,7 +7,8 @@
 
 import ReactorKit
 
-final class SearchViewReactor: Reactor {
+final class SearchViewReactor: BaseReactor, Reactor {
+  
   enum Action {
     
   }
@@ -17,4 +18,5 @@ final class SearchViewReactor: Reactor {
   }
   
   var initialState = State()
+  
 }

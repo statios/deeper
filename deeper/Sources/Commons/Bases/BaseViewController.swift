@@ -32,7 +32,20 @@ class BaseViewController: UIViewController {
     Log.verbose(String(describing: Self.self))
   }
   
-  func configure() {
+  // MARK: Life Cycles
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupUI()
+  }
+  
+  // MARK: Overriding Methods
+  
+  @objc dynamic func configure() {
+    
+  }
+  
+  @objc dynamic func setupUI() {
     
   }
   
