@@ -37,6 +37,10 @@
 		F951F44D25EB646300874179 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F44C25EB646300874179 /* Meta.swift */; };
 		F968098A25EB84E200FCA34F /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968098925EB84E200FCA34F /* AppDelegate+Injection.swift */; };
 		F968099025EB8ABB00FCA34F /* Key.plist in Resources */ = {isa = PBXBuildFile; fileRef = F968098F25EB8ABB00FCA34F /* Key.plist */; };
+		F968099525EB9C3100FCA34F /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968099425EB9C3100FCA34F /* BaseCollectionView.swift */; };
+		F968099C25EB9CAD00FCA34F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968099B25EB9CAD00FCA34F /* UIView+.swift */; };
+		F96809A525EB9D0D00FCA34F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96809A425EB9D0D00FCA34F /* PhotoCell.swift */; };
+		F96809B125EB9DAD00FCA34F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96809B025EB9DAD00FCA34F /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		F951F44C25EB646300874179 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 		F968098925EB84E200FCA34F /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 		F968098F25EB8ABB00FCA34F /* Key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Key.plist; sourceTree = "<group>"; };
+		F968099425EB9C3100FCA34F /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		F968099B25EB9CAD00FCA34F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		F96809A425EB9D0D00FCA34F /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		F96809B025EB9DAD00FCA34F /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +253,7 @@
 			children = (
 				F951F3CE25EAAB3500874179 /* SearchViewController.swift */,
 				F951F3D325EAAB3C00874179 /* SearchViewReactor.swift */,
+				F96809A325EB9D0600FCA34F /* Views */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -252,6 +261,8 @@
 		F951F3D825EAABB700874179 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				F96809AF25EB9DA800FCA34F /* Constants */,
+				F968099925EB9CA100FCA34F /* Extensions */,
 				F951F3E225EAABDF00874179 /* Bases */,
 				F951F3D925EAABC200874179 /* Utilities */,
 			);
@@ -272,6 +283,7 @@
 			children = (
 				F951F3E625EAABF500874179 /* BaseViewController.swift */,
 				F951F3EB25EAAD0700874179 /* BaseReactor.swift */,
+				F968099425EB9C3100FCA34F /* BaseCollectionView.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -325,6 +337,38 @@
 				F951F44C25EB646300874179 /* Meta.swift */,
 			);
 			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		F968099925EB9CA100FCA34F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F968099A25EB9CA700FCA34F /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F968099A25EB9CA700FCA34F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F968099B25EB9CAD00FCA34F /* UIView+.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F96809A325EB9D0600FCA34F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F96809A425EB9D0D00FCA34F /* PhotoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F96809AF25EB9DA800FCA34F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F96809B025EB9DAD00FCA34F /* Device.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,6 +526,7 @@
 				F951F44525EB645F00874179 /* Photo.swift in Sources */,
 				F951F3E725EAABF500874179 /* BaseViewController.swift in Sources */,
 				F951F3EC25EAAD0700874179 /* BaseReactor.swift in Sources */,
+				F96809B125EB9DAD00FCA34F /* Device.swift in Sources */,
 				F951F3CF25EAAB3500874179 /* SearchViewController.swift in Sources */,
 				F93FE8CC25EAA31300B3DDC2 /* AppDelegate.swift in Sources */,
 				F951F43225EB5D4100874179 /* DaumSearchService.swift in Sources */,
@@ -491,8 +536,11 @@
 				F951F3D425EAAB3C00874179 /* SearchViewReactor.swift in Sources */,
 				F968098A25EB84E200FCA34F /* AppDelegate+Injection.swift in Sources */,
 				F951F44D25EB646300874179 /* Meta.swift in Sources */,
+				F968099C25EB9CAD00FCA34F /* UIView+.swift in Sources */,
 				F951F3FC25EAAE6E00874179 /* NetworkLoggerPlugin.swift in Sources */,
 				F951F42725EB5D2E00874179 /* DaumSearchAPI.swift in Sources */,
+				F96809A525EB9D0D00FCA34F /* PhotoCell.swift in Sources */,
+				F968099525EB9C3100FCA34F /* BaseCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

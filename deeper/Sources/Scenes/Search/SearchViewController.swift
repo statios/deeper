@@ -9,22 +9,47 @@ import ReactorKit
 import UIKit
 import RxCocoa
 import RxSwift
+import SnapKit
 
 final class SearchViewController: BaseViewController, View {
   
-  private let searchController = UISearchController().then {
-    $0.obscuresBackgroundDuringPresentation = false
-    $0.searchBar.placeholder = "Search photos"
-    $0.searchBar.barStyle = .black
-  }
+  private let searchController = UISearchController()
+  private let collectionView = BaseCollectionView(
+    frame: .zero,
+    collectionViewLayout: UICollectionViewFlowLayout()
+  )
   
   override func configure() {
     reactor = SearchViewReactor()
   }
   
   override func setupUI() {
+    
+    searchController.do {
+      $0.obscuresBackgroundDuringPresentation = false
+      $0.searchBar.placeholder = "Search photos"
+      $0.searchBar.barStyle = .black
+    }
+    
     navigationItem.do {
       $0.searchController = searchController
+    }
+    
+    collectionView.do {
+      $0.add(to: view)
+      $0.snp.makeConstraints { (make) in
+        make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+        make.leading.trailing.equalToSuperview()
+        make.bottom.equalTo(view)
+      }
+      $0.flowLayout?.scrollDirection = .vertical
+      $0.flowLayout?.itemSize = .init(
+        width: Device.width / 3,
+        height: Device.width / 3
+      )
+      $0.flowLayout?.minimumLineSpacing = 0
+      $0.flowLayout?.minimumInteritemSpacing = 0
+      $0.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
     }
   }
   
@@ -45,7 +70,15 @@ final class SearchViewController: BaseViewController, View {
     .bind(to: reactor.action)
     .disposed(by: disposeBag)
     
-    
+    reactor.state.map { $0.photos }
+      .bind(
+        to: collectionView.rx.items(
+          cellIdentifier: "PhotoCell",
+          cellType: PhotoCell.self
+        )
+      ) { (index, photo, cell) in
+        cell.configure(photo)
+      }.disposed(by: disposeBag)
   }
   
 }
