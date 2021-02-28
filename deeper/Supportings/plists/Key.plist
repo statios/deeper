@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Kakao API Key</key>
-	<string></string>
+	<key>KAKAO_API_KEY</key>
+	<string>c50fe59fd6545cb6056bc4fbf7f54b34</string>
 </dict>
 </plist>

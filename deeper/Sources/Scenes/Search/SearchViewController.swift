@@ -45,8 +45,7 @@ final class SearchViewController: BaseViewController, View {
     .bind(to: reactor.action)
     .disposed(by: disposeBag)
     
-    reactor.state.map { $0.photos }
-      .debug().subscribe()
+    
   }
   
 }
