@@ -30,6 +30,9 @@
 		F951F3EC25EAAD0700874179 /* BaseReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F3EB25EAAD0700874179 /* BaseReactor.swift */; };
 		F951F3FC25EAAE6E00874179 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F3FB25EAAE6E00874179 /* NetworkLoggerPlugin.swift */; };
 		F951F40425EAAEBF00874179 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F40325EAAEBF00874179 /* NetworkProvider.swift */; };
+		F951F42725EB5D2E00874179 /* DaumSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F42625EB5D2E00874179 /* DaumSearchAPI.swift */; };
+		F951F43225EB5D4100874179 /* DaumSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F43125EB5D4100874179 /* DaumSearchService.swift */; };
+		F951F43825EB5DB300874179 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F43725EB5DB300874179 /* Photos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		F951F3EB25EAAD0700874179 /* BaseReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReactor.swift; sourceTree = "<group>"; };
 		F951F3FB25EAAE6E00874179 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
 		F951F40325EAAEBF00874179 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		F951F42625EB5D2E00874179 /* DaumSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumSearchAPI.swift; sourceTree = "<group>"; };
+		F951F43125EB5D4100874179 /* DaumSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumSearchService.swift; sourceTree = "<group>"; };
+		F951F43725EB5DB300874179 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				F93FE90125EAA41E00B3DDC2 /* Application */,
+				F951F43625EB5DA300874179 /* Models */,
 				F93FE90225EAA42800B3DDC2 /* Scenes */,
 				F951F3F925EAAE3800874179 /* Services */,
 				F951F3D825EAABB700874179 /* Commons */,
@@ -243,7 +250,8 @@
 		F951F3D925EAABC200874179 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				F951F3DA25EAABCB00874179 /* Log.swift */,
+				F951F42525EB5C6A00874179 /* Networking */,
+				F951F42125EB5C6400874179 /* Logging */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -260,18 +268,43 @@
 		F951F3F925EAAE3800874179 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F951F3FA25EAAE4B00874179 /* NetworkService */,
+				F951F3FA25EAAE4B00874179 /* Daum Search */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		F951F3FA25EAAE4B00874179 /* NetworkService */ = {
+		F951F3FA25EAAE4B00874179 /* Daum Search */ = {
+			isa = PBXGroup;
+			children = (
+				F951F42625EB5D2E00874179 /* DaumSearchAPI.swift */,
+				F951F43125EB5D4100874179 /* DaumSearchService.swift */,
+			);
+			path = "Daum Search";
+			sourceTree = "<group>";
+		};
+		F951F42125EB5C6400874179 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				F951F3DA25EAABCB00874179 /* Log.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		F951F42525EB5C6A00874179 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				F951F3FB25EAAE6E00874179 /* NetworkLoggerPlugin.swift */,
 				F951F40325EAAEBF00874179 /* NetworkProvider.swift */,
 			);
-			path = NetworkService;
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F951F43625EB5DA300874179 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F951F43725EB5DB300874179 /* Photos.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,10 +462,13 @@
 				F951F3EC25EAAD0700874179 /* BaseReactor.swift in Sources */,
 				F951F3CF25EAAB3500874179 /* SearchViewController.swift in Sources */,
 				F93FE8CC25EAA31300B3DDC2 /* AppDelegate.swift in Sources */,
+				F951F43225EB5D4100874179 /* DaumSearchService.swift in Sources */,
+				F951F43825EB5DB300874179 /* Photos.swift in Sources */,
 				F951F3DB25EAABCB00874179 /* Log.swift in Sources */,
 				F951F40425EAAEBF00874179 /* NetworkProvider.swift in Sources */,
 				F951F3D425EAAB3C00874179 /* SearchViewReactor.swift in Sources */,
 				F951F3FC25EAAE6E00874179 /* NetworkLoggerPlugin.swift in Sources */,
+				F951F42725EB5D2E00874179 /* DaumSearchAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
