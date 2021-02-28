@@ -32,11 +32,8 @@ class BaseViewController: UIViewController {
     Log.verbose(String(describing: Self.self))
   }
   
-}
-
-// MARK: - Helpers
-extension BaseViewController {
   func configure() {
     
   }
+  
 }
