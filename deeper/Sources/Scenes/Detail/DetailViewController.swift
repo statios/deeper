@@ -12,8 +12,8 @@ import RxSwift
 
 final class DetailViewController: BaseViewController, View {
   
-  private let scrollView = UIScrollView()
-  private let contentView = UIView()
+  let scrollView = UIScrollView()
+  let contentView = UIView()
   private let photoImageView = UIImageView()
   private let sourceLabel = UILabel()
   private let updatedLabel = UILabel()
@@ -44,7 +44,7 @@ final class DetailViewController: BaseViewController, View {
     }
     
     sourceLabel.do {
-      $0.add(to: view)
+      $0.add(to: photoImageView)
       $0.snp.makeConstraints { (make) in
         make.leading.equalToSuperview().offset(16)
         make.bottom.equalToSuperview().offset(-24)
@@ -53,7 +53,7 @@ final class DetailViewController: BaseViewController, View {
     }
     
     updatedLabel.do {
-      $0.add(to: view)
+      $0.add(to: photoImageView)
       $0.snp.makeConstraints { (make) in
         make.leading.equalToSuperview().offset(16)
         make.bottom.equalTo(sourceLabel.snp.top).offset(-8)
@@ -70,17 +70,18 @@ final class DetailViewController: BaseViewController, View {
     reactor.state.compactMap { $0.photo }
       .subscribe(onNext: { [weak self] in
         
-        guard let `self` = self,
-              let url = URL(string: $0.imageURL),
+        guard let `self` = self else { return }
+        guard let url = URL(string: $0.imageURL),
               let data = try? Data(contentsOf: url),
               let image = UIImage(data: data)
         else { return }
         
-        let ratio = Device.width / image.size.width
-        let height = ratio * image.size.height
+        let ratio = Device.width / CGFloat($0.width)
+        let height = ratio * CGFloat($0.height)
         let ratioImage = image.resized(
           to: .init(width: Device.width, height: height)
         )
+        
         self.photoImageView.image = ratioImage
         
         self.photoImageView
