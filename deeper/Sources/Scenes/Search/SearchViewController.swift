@@ -43,6 +43,7 @@ final class SearchViewController: BaseViewController, View {
       $0.obscuresBackgroundDuringPresentation = false
       $0.searchBar.placeholder = "Search photos"
       $0.searchBar.barStyle = .black
+      $0.searchBar.searchTextField.overrideUserInterfaceStyle = .dark
     }
     
     navigationItem.do {
