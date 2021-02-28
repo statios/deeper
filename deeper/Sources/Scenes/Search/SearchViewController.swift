@@ -18,12 +18,22 @@ final class SearchViewController: BaseViewController, View {
     frame: .zero,
     collectionViewLayout: UICollectionViewFlowLayout()
   )
+  private let emptyLabel = UILabel()
   
   override func configure() {
     reactor = SearchViewReactor()
   }
   
   override func setupUI() {
+    
+    self.do {
+      $0.title = "deeper"
+    }
+    
+    navigationController?.navigationBar.do {
+      $0.backgroundColor = .black
+      $0.barTintColor = .black
+    }
     
     searchController.do {
       $0.obscuresBackgroundDuringPresentation = false
@@ -49,7 +59,19 @@ final class SearchViewController: BaseViewController, View {
       )
       $0.flowLayout?.minimumLineSpacing = 0
       $0.flowLayout?.minimumInteritemSpacing = 0
+      $0.keyboardDismissMode = .onDrag
       $0.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
+    }
+    
+    emptyLabel.do {
+      $0.add(to: view)
+      $0.snp.makeConstraints { (make) in
+        make.center.equalToSuperview()
+      }
+      $0.textColor = .white
+      $0.text = "검색 결과가 없습니다."
+      $0.font = UIFont.boldSystemFont(ofSize: 24)
+      $0.isHidden = true
     }
   }
   
@@ -75,7 +97,6 @@ final class SearchViewController: BaseViewController, View {
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
     
-    
     // State
     reactor.state.compactMap { $0.photos?.documents }
       .observeOn(MainScheduler.asyncInstance)
@@ -87,6 +108,11 @@ final class SearchViewController: BaseViewController, View {
       ) { (index, photo, cell) in
         cell.configure(photo)
       }.disposed(by: disposeBag)
+    
+    reactor.state.compactMap { $0.photos?.documents }
+      .map { !$0.isEmpty }
+      .bind(to: emptyLabel.rx.isHidden)
+      .disposed(by: disposeBag)
   }
   
 }
