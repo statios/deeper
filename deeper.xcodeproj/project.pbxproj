@@ -33,6 +33,8 @@
 		F951F42725EB5D2E00874179 /* DaumSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F42625EB5D2E00874179 /* DaumSearchAPI.swift */; };
 		F951F43225EB5D4100874179 /* DaumSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F43125EB5D4100874179 /* DaumSearchService.swift */; };
 		F951F43825EB5DB300874179 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F43725EB5DB300874179 /* Photos.swift */; };
+		F951F44525EB645F00874179 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F44425EB645F00874179 /* Photo.swift */; };
+		F951F44D25EB646300874179 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F44C25EB646300874179 /* Meta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		F951F42625EB5D2E00874179 /* DaumSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumSearchAPI.swift; sourceTree = "<group>"; };
 		F951F43125EB5D4100874179 /* DaumSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumSearchService.swift; sourceTree = "<group>"; };
 		F951F43725EB5DB300874179 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		F951F44425EB645F00874179 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F951F44C25EB646300874179 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				F93FE90125EAA41E00B3DDC2 /* Application */,
+				F951F44325EB645500874179 /* Use Cases */,
 				F951F43625EB5DA300874179 /* Models */,
 				F93FE90225EAA42800B3DDC2 /* Scenes */,
 				F951F3F925EAAE3800874179 /* Services */,
@@ -305,6 +310,15 @@
 				F951F43725EB5DB300874179 /* Photos.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F951F44325EB645500874179 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				F951F44425EB645F00874179 /* Photo.swift */,
+				F951F44C25EB646300874179 /* Meta.swift */,
+			);
+			path = "Use Cases";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F951F44525EB645F00874179 /* Photo.swift in Sources */,
 				F951F3E725EAABF500874179 /* BaseViewController.swift in Sources */,
 				F951F3EC25EAAD0700874179 /* BaseReactor.swift in Sources */,
 				F951F3CF25EAAB3500874179 /* SearchViewController.swift in Sources */,
@@ -467,6 +482,7 @@
 				F951F3DB25EAABCB00874179 /* Log.swift in Sources */,
 				F951F40425EAAEBF00874179 /* NetworkProvider.swift in Sources */,
 				F951F3D425EAAB3C00874179 /* SearchViewReactor.swift in Sources */,
+				F951F44D25EB646300874179 /* Meta.swift in Sources */,
 				F951F3FC25EAAE6E00874179 /* NetworkLoggerPlugin.swift in Sources */,
 				F951F42725EB5D2E00874179 /* DaumSearchAPI.swift in Sources */,
 			);
