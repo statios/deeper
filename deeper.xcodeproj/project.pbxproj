@@ -19,6 +19,7 @@
 		F93FE93425EAA87F00B3DDC2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F93FE93325EAA87F00B3DDC2 /* RxCocoa */; };
 		F93FE93625EAA87F00B3DDC2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F93FE93525EAA87F00B3DDC2 /* RxRelay */; };
 		F93FE93C25EAA8E800B3DDC2 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = F93FE93B25EAA8E800B3DDC2 /* ReactorKit */; };
+		F94528BF25EC34E10093EC50 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94528BE25EC34E10093EC50 /* UIViewController+.swift */; };
 		F951F3B725EAA97000874179 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = F951F3B625EAA97000874179 /* Resolver */; };
 		F951F3BD25EAA9AF00874179 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = F951F3BC25EAA9AF00874179 /* Then */; };
 		F951F3C325EAA9F700874179 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F951F3C225EAA9F700874179 /* SnapKit */; };
@@ -44,6 +45,7 @@
 		F96809BD25EBEA6600FCA34F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96809BC25EBEA6600FCA34F /* DetailViewController.swift */; };
 		F96809C225EBEA6D00FCA34F /* DetailViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96809C125EBEA6D00FCA34F /* DetailViewReactor.swift */; };
 		F9680A0825EC217A00FCA34F /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9680A0725EC217A00FCA34F /* UIImage+.swift */; };
+		F9680A1125EC339700FCA34F /* DaumSearchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9680A1025EC339700FCA34F /* DaumSearchError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,7 @@
 		F93FE8E925EAA31500B3DDC2 /* deeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93FE8ED25EAA31500B3DDC2 /* deeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deeperUITests.swift; sourceTree = "<group>"; };
 		F93FE8EF25EAA31500B3DDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F94528BE25EC34E10093EC50 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		F951F3CE25EAAB3500874179 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F951F3D325EAAB3C00874179 /* SearchViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewReactor.swift; sourceTree = "<group>"; };
 		F951F3DA25EAABCB00874179 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		F96809BC25EBEA6600FCA34F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F96809C125EBEA6D00FCA34F /* DetailViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewReactor.swift; sourceTree = "<group>"; };
 		F9680A0725EC217A00FCA34F /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		F9680A1025EC339700FCA34F /* DaumSearchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumSearchError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +312,7 @@
 			children = (
 				F951F42625EB5D2E00874179 /* DaumSearchAPI.swift */,
 				F951F43125EB5D4100874179 /* DaumSearchService.swift */,
+				F9680A1025EC339700FCA34F /* DaumSearchError.swift */,
 			);
 			path = "Daum Search";
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				F968099B25EB9CAD00FCA34F /* UIView+.swift */,
+				F94528BE25EC34E10093EC50 /* UIViewController+.swift */,
 				F9680A0725EC217A00FCA34F /* UIImage+.swift */,
 			);
 			path = UIKit;
@@ -553,6 +559,8 @@
 				F96809BD25EBEA6600FCA34F /* DetailViewController.swift in Sources */,
 				F951F3D425EAAB3C00874179 /* SearchViewReactor.swift in Sources */,
 				F968098A25EB84E200FCA34F /* AppDelegate+Injection.swift in Sources */,
+				F9680A1125EC339700FCA34F /* DaumSearchError.swift in Sources */,
+				F94528BF25EC34E10093EC50 /* UIViewController+.swift in Sources */,
 				F951F44D25EB646300874179 /* Meta.swift in Sources */,
 				F968099C25EB9CAD00FCA34F /* UIView+.swift in Sources */,
 				F9680A0825EC217A00FCA34F /* UIImage+.swift in Sources */,
