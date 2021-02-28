@@ -34,7 +34,14 @@ extension DaumSearchAPI: TargetType {
   var task: Task {
     switch self {
     case .photos(let request):
-      return .requestJSONEncodable(request)
+      return .requestParameters(
+        parameters: [
+          "query": request.query,
+          "page": request.page as Any,
+          "size": request.size as Any
+        ],
+        encoding: URLEncoding.default
+      )
     }
   }
   

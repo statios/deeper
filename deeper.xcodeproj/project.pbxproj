@@ -35,6 +35,7 @@
 		F951F43825EB5DB300874179 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F43725EB5DB300874179 /* Photos.swift */; };
 		F951F44525EB645F00874179 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F44425EB645F00874179 /* Photo.swift */; };
 		F951F44D25EB646300874179 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951F44C25EB646300874179 /* Meta.swift */; };
+		F968098A25EB84E200FCA34F /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968098925EB84E200FCA34F /* AppDelegate+Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		F951F43725EB5DB300874179 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		F951F44425EB645F00874179 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F951F44C25EB646300874179 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		F968098925EB84E200FCA34F /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				F93FE8CB25EAA31300B3DDC2 /* AppDelegate.swift */,
+				F968098925EB84E200FCA34F /* AppDelegate+Injection.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				F951F3DB25EAABCB00874179 /* Log.swift in Sources */,
 				F951F40425EAAEBF00874179 /* NetworkProvider.swift in Sources */,
 				F951F3D425EAAB3C00874179 /* SearchViewReactor.swift in Sources */,
+				F968098A25EB84E200FCA34F /* AppDelegate+Injection.swift in Sources */,
 				F951F44D25EB646300874179 /* Meta.swift in Sources */,
 				F951F3FC25EAAE6E00874179 /* NetworkLoggerPlugin.swift in Sources */,
 				F951F42725EB5D2E00874179 /* DaumSearchAPI.swift in Sources */,
