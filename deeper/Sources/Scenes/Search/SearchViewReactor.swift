@@ -17,18 +17,21 @@ final class SearchViewReactor: BaseReactor, Reactor {
     case searchText(String)
     case search
     case willDisplay(IndexPath)
+    case selectedItem(IndexPath)
   }
   
   enum Mutation {
     case setQuery(String)
     case setPhotos(Photos.Response)
     case setPagedPhotos(Photos.Response)
+    case setSelectedIndex(Int)
   }
   
   struct State {
     fileprivate var query: String = ""
     fileprivate var page: Int = 1
     var photos: Photos.Response?
+    var selectedIndex: Int?
   }
   
   var initialState = State()
@@ -47,7 +50,7 @@ final class SearchViewReactor: BaseReactor, Reactor {
         to: .photos(request),
         type: Photos.Response.self
       ).asObservable()
-      .flatMap { Observable.just(Mutation.setPhotos($0)) }
+      .map { Mutation.setPhotos($0) }
     case .willDisplay(let indexPath):
       guard currentState.query != "" else { return .never() }
       guard currentState.photos?.meta.isEnd == false else { return .never() }
@@ -63,12 +66,18 @@ final class SearchViewReactor: BaseReactor, Reactor {
         to: .photos(request),
         type: Photos.Response.self
       ).asObservable()
-      .flatMap { Observable.just(Mutation.setPagedPhotos($0)) }
+      .map { Mutation.setPagedPhotos($0) }
+    case .selectedItem(let indexPath):
+      return .just(.setSelectedIndex(indexPath.item))
     }
   }
   
   func reduce(state: State, mutation: Mutation) -> State {
     var newState = state
+    
+    // Reset
+    newState.selectedIndex = nil
+    
     switch mutation {
     case .setQuery(let query):
       newState.query = query
@@ -81,6 +90,8 @@ final class SearchViewReactor: BaseReactor, Reactor {
       newState.photos?.documents.append(
         contentsOf: photos.documents
       )
+    case .setSelectedIndex(let index):
+      newState.selectedIndex = index
     }
     return newState
   }
