@@ -12,7 +12,7 @@ struct Photos {
     var query: String
     var sort: String?
     var page: Int?
-    var size: Int?
+    var size: Int? = 30
   }
   
   struct Response: Codable {

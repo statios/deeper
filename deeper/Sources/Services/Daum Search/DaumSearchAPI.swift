@@ -34,11 +34,25 @@ extension DaumSearchAPI: TargetType {
   var task: Task {
     switch self {
     case .photos(let request):
-      return .requestJSONEncodable(request)
+      return .requestParameters(
+        parameters: [
+          "query": request.query,
+          "page": request.page as Any,
+          "size": request.size as Any
+        ],
+        encoding: URLEncoding.default
+      )
     }
   }
   
   var headers: [String : String]? {
-    return [:]
+    var header: [String: String] = [:]
+    if let path = Bundle.main.path(forResource: "Key", ofType: "plist") {
+      if let dict = NSDictionary(contentsOfFile: path) {
+        let token = dict["KAKAO_API_KEY"] as? String
+        header["Authorization"] = "KakaoAK " + (token ?? "")
+      }
+    }
+    return header
   }
 }
