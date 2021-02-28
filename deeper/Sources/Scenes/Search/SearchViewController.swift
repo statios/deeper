@@ -33,6 +33,10 @@ final class SearchViewController: BaseViewController, View {
     navigationController?.navigationBar.do {
       $0.backgroundColor = .black
       $0.barTintColor = .black
+      $0.titleTextAttributes = [
+        NSAttributedString.Key.foregroundColor: UIColor.white,
+        NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)
+      ]
     }
     
     searchController.do {
