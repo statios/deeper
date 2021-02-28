@@ -8,7 +8,7 @@
 import Foundation
 
 struct Photos {
-  struct Request {
+  struct Request: Codable {
     var query: String
     var sort: String?
     var page: Int?
