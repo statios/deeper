@@ -9,4 +9,6 @@ import UIKit
 
 struct Device {
   static let width = UIScreen.main.bounds.width
+  static let height = UIScreen.main.bounds.height
+  static let size = UIScreen.main.bounds.size
 }

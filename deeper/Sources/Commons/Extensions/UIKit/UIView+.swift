@@ -8,7 +8,9 @@
 import UIKit
 
 extension UIView {
-  func add(to: UIView) {
+  @discardableResult
+  func add(to: UIView) -> UIView {
     to.addSubview(self)
+    return self
   }
 }

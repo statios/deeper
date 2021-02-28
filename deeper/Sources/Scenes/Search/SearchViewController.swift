@@ -101,6 +101,11 @@ final class SearchViewController: BaseViewController, View {
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
     
+    collectionView.rx.itemSelected
+      .map { Reactor.Action.selectedItem($0) }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+    
     // State
     reactor.state.compactMap { $0.photos?.documents }
       .observeOn(MainScheduler.asyncInstance)
@@ -117,6 +122,18 @@ final class SearchViewController: BaseViewController, View {
       .map { !$0.isEmpty }
       .bind(to: emptyLabel.rx.isHidden)
       .disposed(by: disposeBag)
+    
+    reactor.state.compactMap { $0.selectedIndex }
+      .withLatestFrom(reactor.state.compactMap { $0.photos?.documents }) {
+        DetailViewReactor.Action.receivePhoto($1[$0])
+      }.subscribe(onNext: { [weak self] action in
+        let viewController = DetailViewController().then {
+          $0.reactor?.action.on(.next(action))
+        }
+        self?.navigationController?.pushViewController(
+          viewController, animated: true
+        )
+      }).disposed(by: disposeBag)
   }
   
 }
